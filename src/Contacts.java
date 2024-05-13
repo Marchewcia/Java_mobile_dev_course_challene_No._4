@@ -11,6 +11,8 @@ public class Contacts extends InterfaceAbstractClass {
                 return false;
             case 2:
                 return false;
+            case 3:
+                return true;
             default:
                 return true;
         }
