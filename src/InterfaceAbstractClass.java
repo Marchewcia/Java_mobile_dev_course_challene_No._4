@@ -1,4 +1,6 @@
 public abstract class InterfaceAbstractClass {
+    public InterfaceAbstractClass() {
+    }
 
-    abstract boolean menu();
+    abstract void menu();
 }
