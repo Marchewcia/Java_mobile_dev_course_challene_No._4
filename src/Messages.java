@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Messages extends InterfaceAbstractClass {
-    private ArrayList<String> messages = new ArrayList<>();
-    private ArrayList<String> contacts = new ArrayList<>();
+    private final ArrayList<String> messages;
+    private final ArrayList<String> contacts;
 
     public Messages(ArrayList<String> messages, ArrayList<String> contacts) {
         this.messages = messages;
@@ -21,14 +21,15 @@ public class Messages extends InterfaceAbstractClass {
                 for (int i  = 0; i < this.messages.size(); i++){
                     System.out.println(this.contacts.get(i) + ": " + this.messages.get(i));
                 }
-                break;
+                menu();
             case 2:
+                scanner.nextLine();
                 System.out.println("Input first your contact name");
                 this.contacts.add(scanner.nextLine());
                 System.out.println("And now your new message that you want to send");
                 this.messages.add(scanner.nextLine());
                 System.out.println("Message has been successfully send");
-                break;
+                menu();
             default:
                 break;
         }
